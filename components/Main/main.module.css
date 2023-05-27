@@ -1,0 +1,24 @@
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.home div {
+    width: 100%;
+}
+
+@media screen and (max-width: 1023px) {
+    .home {
+        min-inline-size: min-content;
+        padding: 0 50px;
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .home {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}

@@ -1,0 +1,196 @@
+.header {
+    position: fixed;
+    top: 0;
+    padding: 0px 50px;
+    background-color: var(--secondary-color);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    z-index: 11;
+    filter: none !important;
+    pointer-events: auto !important;
+    user-select: auto !important;
+    width: 100%;
+}
+
+.header nav {
+    position: relative;
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--tertiaryLight-color);
+    font-family: "Lucida Console", Helvetica, Arial, sans-serif;
+    counter-reset: item 0;
+    z-index: 12;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    display: block;
+    color: var(--primary-color);
+    width: 42px;
+    height: 42px;
+}
+
+.logo a span {
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    font-size: 20px;
+}
+
+.logo polygon {
+    fill: none;
+}
+
+.logo:hover polygon {
+    fill: var(--primaryLight-color) !important;
+}
+
+.links {
+    display: flex;
+}
+
+.linkOl {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.linkAnchor {
+    padding: 10px 15px;
+    counter-increment: item 1;
+    font-size: 20px;
+}
+
+.linkAnchor:hover {
+    background-color: var(--primaryLight-color);
+    border-radius: 3px;
+}
+
+.link ol li a:active, .link ol li a:hover {
+    background-color: var(--secondary-color);
+    border-radius: 3px;
+}
+
+.linkAnchor:before {
+    content: "0"counter(item) ". ";
+    text-align: right;
+    color: var(--primary-color);
+    font-size: 18px;
+}
+
+.resumeButton {
+    margin: 1rem;
+    color: var(--primary-color);
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 3px;
+    padding: 0.75rem 1rem;
+    font-family: "Lucida Console", Helvetica, Arial, sans-serif;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    ;
+}
+
+.resumeButton:hover {
+    background-color: var(--primaryLight-color);
+}
+
+.hamburger {
+    overflow: visible;
+    margin: 0 -12px 0 0;
+    padding: 15px;
+    cursor: pointer;
+    transition-timing-function: linear;
+    transition-duration: 0.15s;
+    transition-property: opacity, filter;
+    text-transform: none;
+    color: inherit;
+    border: 0;
+    background-color: transparent;
+    display: none;
+}
+
+.hamburgerBox {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 24px;
+}
+
+.hamburgerInner {
+    background-color: var(--primary-color);
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    border-radius: 4px;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transition-duration: 0.22s;
+    transition-property: transform;
+}
+
+.hamburgerInner::before, .hamburgerInner::after {
+    content: "";
+    display: block;
+    background-color: var(--primary-color);
+    position: absolute;
+    left: auto;
+    right: 0;
+    width: 30px;
+    height: 2px;
+    transition-timing-function: ease;
+    transition-duration: 0.15s;
+    transition-property: transform;
+    border-radius: 4px;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+    .logo a span {
+        top: 28px;
+    }
+}
+
+
+@media (max-width: 1023px) {
+    .header {
+        padding: 0 40px;
+    }
+
+    .links {
+        display: none;
+    }
+
+    .hamburger {
+        display: flex;
+        z-index: 12;
+    }
+
+    .logo a span {
+        top: 16px;
+    }
+
+    .header nav {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        padding: 0 25px;
+    }
+
+    .logo a span {
+        top: 16px;
+    }
+
+    .header nav {
+        margin-top: 1rem;
+    }
+}

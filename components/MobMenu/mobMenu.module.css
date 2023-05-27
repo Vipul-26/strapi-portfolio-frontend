@@ -1,0 +1,105 @@
+.menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  outline: 0;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  display: none;
+}
+
+.aside {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--secondaryLighter-color);
+  padding: 50px;
+  width: 50vw;
+  height: 100%;
+  position: relative;
+  right: 0;
+  margin-left: auto;
+  font-family: "Lucida Console", Helvetica, Arial, sans-serif;
+  box-shadow: -10px 0px 30px -15px hsla(0, 0%, 57.3%, 0.2);
+  font-size: larger;
+}
+
+.nav {
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+  color: var(--tertiaryLight-color);
+}
+
+.nav ol {
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.nav ol li {
+  margin: 0 auto 20px;
+  position: relative;
+  font-size: 18px;
+  counter-increment: item 1;
+}
+
+.nav ol li:before {
+  display: block;
+  content: "0"counter(item) ".";
+  color: var(--primary-color);
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.nav ol li a {
+  padding: 3px 20px 20px;
+  width: 100%;
+}
+
+.nav ol li a:hover {
+  color: var(--primary-color);
+}
+
+.resumeLink {
+  margin: 10% auto 0;
+  width: max-content;
+  font-size: 18px;
+  color: var(--primary-color);
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  border-radius: 3px;
+  padding: 18px 50px;
+  font-family: "Lucida Console", Helvetica, Arial, sans-serif;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.resumeLink:hover {
+  background-color: var(--primaryLight-color);
+}
+
+
+@media (max-width: 1023px) {
+  .menu {
+    display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .aside {
+    padding: 0 25px 25px 25px;
+    font-size: initial;
+  }
+}
+
+@media (max-width: 480px) {
+  .aside {
+    width: 75vw;
+  }
+}

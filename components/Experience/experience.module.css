@@ -1,0 +1,273 @@
+.jobTabs {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+.jobTabs .tablist {
+    display: block;
+    position: relative;
+    width: max-content;
+    z-index: 3;
+}
+
+.jobTabs .tablist li button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: transparent;
+    height: 42px;
+    padding: 0 20px 2px;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+    border-left: 3px solid var(--tertiary-color);
+    text-align: left;
+    white-space: nowrap;
+    font-family: "Lucida Console", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+}
+
+.jobTabs .tablist li button:hover, .jobTabs .tablist li button:focus {
+    background-color: var(--secondaryLighter-color);
+}
+
+.buttonActive {
+    color: var(--primary-color) !important;
+    border-left: 3px solid var(--primary-color) !important;
+    font-weight: 700;
+}
+
+.jobContent {
+    position: relative;
+    padding-top: 12px;
+    padding-left: 30px;
+}
+
+.jobTabContent {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+
+.jobTabContent ul {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    list-style: none;
+}
+
+.jobTabContent ul li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+}
+
+.jobTabContent ul li:before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    line-height: 20px;
+    margin-top: 3px;
+}
+
+.jobTitle {
+    color: var(--tertiaryLight-color);
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.jobCompany {
+    color: var(--primary-color);
+}
+
+.jobDetail {
+    font-family: "Lucida Console", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+    color: var(--tertiaryLight-color);
+    margin-bottom: 30px;
+    margin-top: 0.8rem;
+}
+
+.jobDetail svg {
+    width: 15px;
+}
+
+.jobDescription ul {
+    padding: 0;
+    width: 100%;
+    margin: 0;
+    list-style: none;
+    font-size: 18px;
+}
+
+.jobDescription ul li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+}
+
+.jobDescription ul li:before {
+    content: "▹";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+    line-height: 20px;
+}
+
+.section {
+    margin: 0 auto;
+    padding: 100px 0;
+    padding-bottom: 0;
+    max-width: 750px;
+    position: relative;
+
+}
+
+.heading {
+    position: relative;
+    display: flex;
+    align-items: baseline;
+    margin: 10px 0 40px;
+    width: 100%;
+    white-space: nowrap;
+    font-size: 32px;
+}
+
+.heading:before {
+    content: "02"".";
+    margin-right: 10px;
+    font-family: "Lucida Console", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    color: var(--primary-color);
+    font-size: 20px;
+    position: relative;
+    bottom: 4px;
+}
+
+.heading:after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 300px;
+    background-color: var(--tertiary-color);
+    position: relative;
+    top: -10px;
+    margin-left: 20px;
+}
+
+
+@media (max-width: 1023px) {
+    .jobContent {
+        padding-left: 20px;
+    }
+
+    .section {
+        padding: 100px 0;
+        max-width: 1000px !important;
+    }
+
+    .heading:after {
+        width: inherit;
+    }
+
+    .jobTabs .tablist li button {
+        padding: 0 10px 2px;
+        font-family: system-ui;
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+}
+
+@media (max-width: 767px) {
+    .buttonActive {
+        color: var(--primary-color) !important;
+        border-left-width: 0 !important;
+        border-bottom: 2px solid var(--primary-color) !important;
+    }
+
+    .jobTabs {
+        display: block;
+    }
+
+    .jobTabs .tablist {
+        display: flex;
+        overflow-x: scroll;
+        margin-bottom: 30px;
+        width: calc(100% + 100px);
+        margin-left: -50px;
+    }
+
+    .jobTabs .tablist li:first-of-type {
+        margin-left: 50px;
+    }
+
+    .jobTabs .tablist li:last-of-type {
+        padding-right: 50px;
+    }
+
+    .jobTabs .tablist li button {
+        padding: 0 15px;
+        text-align: center;
+        border-left: 0;
+        border-bottom: 2px solid var(--tertiary-color);
+        min-width: 120px;
+    }
+
+    .jobTitle {
+        font-size: 19px;
+    }
+
+    .jobContent {
+        padding-left: 0;
+    }
+
+    .section {
+        padding-top: 100px;
+        padding-bottom: 25px;
+    }
+
+    .heading {
+        font-size: 20px;
+        align-items: end;
+    }
+
+    .heading:before {
+        font-size: 18px;
+        bottom: 1px;
+    }
+
+    .heading:after {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .jobTabs .tablist {
+        width: calc(100% + 50px);
+        margin-left: -25px;
+    }
+
+    .jobTabs .tablist li:first-of-type {
+        margin-left: 25px;
+    }
+
+    .jobTabs .tablist li:last-of-type {
+        padding-right: 25px;
+    }
+
+    .jobTabs .tablist li button {
+        padding: 0 15px 2px;
+    }
+
+    .heading:after {
+        margin-left: 10px;
+    }
+}

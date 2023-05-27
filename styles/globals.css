@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: theme(colors.primary);
+  --primaryLight-color: theme(colors.primaryLight);
+  --secondary-color: theme(colors.secondary);
+  --secondaryLight-color: theme(colors.secondaryLight);
+  --secondaryLighter-color: theme(colors.secondaryLighter);
+  --secondaryLightest-color: theme(colors.secondaryLightest);
+  --tertiary-color: theme(colors.tertiary);
+  --tertiaryLight-color: theme(colors.tertiaryLight);
+  --tertiaryLighter-color: theme(colors.tertiaryLighter);
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--secondary-color);
+  color: var(--tertiary-color);
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.bounce:hover {
+  position: relative;
+  animation: bounce 0.5s normal linear;
+  animation-iteration-count: 1;
+}
+
+@keyframes bounce {
+  0% {
+    top: 0;
+  }
+
+  50% {
+    top: -0.2em;
+  }
+
+  70% {
+    top: -0.3em;
+  }
+
+  100% {
+    top: 0;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--secondary-color);
+}
+
+::-webkit-scrollbar-thumb,
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+  border-radius: 5px;
+}
+
+.rotatingLines {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 16rem;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+  .rotatingLines {
+    margin-top: 13rem;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .rotatingLines {
+    margin-top: 20rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .rotatingLines {
+    margin-top: 14rem;
+  }
+}

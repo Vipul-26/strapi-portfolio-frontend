@@ -1,0 +1,95 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    background-color: var(--secondaryLight-color);
+    color: var(--tertiary-color);
+    text-align: center;
+    height: auto;
+    min-height: 70px;
+}
+
+.content {
+    color: var(--tertiaryLight-color);
+    width: 100%;
+    margin: 13px 0;
+    font-family: "Lucida Console", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1;
+}
+
+.content a {
+    color: var(--tertiaryLight-color);
+}
+
+.content a div {
+    margin-top: 10px;
+}
+
+.content a div>span {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 7px;
+}
+
+.socialContainer {
+    color: var(--tertiaryLight-color);
+    width: 100%;
+    max-width: 270px;
+    margin: 0 auto 10px;
+    padding: 0 30px;
+}
+
+.socialContainer .list {
+    display: inline-flex;
+    padding: 10px;
+}
+
+.list li {
+    margin-right: 2rem;
+}
+
+.list li:last-child {
+    margin-right: 0;
+}
+
+.svg svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.heart {
+    color: red;
+}
+
+.email {
+    color: darkturquoise;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 1023px) {
+    .socialContainer {
+        display: block;
+    }
+
+    .content {
+        font-size: 16px;
+    }
+
+    .svg svg {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+@media (max-width: 767px) {
+    .content {
+        font-size: 14px;
+    }
+
+    .svg svg {
+        width: 20px;
+        height: 20px;
+    }
+}

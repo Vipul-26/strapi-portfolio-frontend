@@ -1,0 +1,123 @@
+.contact {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 100px;
+}
+
+.contact .title {
+    margin: 0 0 20px;
+    font-size: 60px;
+}
+
+.contact .bigButton {
+    margin-top: 50px;
+}
+
+.section {
+    margin: 0 auto;
+    padding: 120px 0;
+    padding-bottom: 80px;
+    max-width: 1000px;
+}
+
+.para {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 3.5rem;
+}
+
+.headingCenter {
+    display: block;
+    color: var(--primary-color);
+    font-size: 16px;
+    font-family: "Lucida Console", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.headingCenter:before {
+    content: "04"".";
+    margin-right: 10px;
+    font-family: "Lucida Console", Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    color: var(--primary-color);
+    position: relative;
+    bottom: 0;
+    font-size: 14px;
+}
+
+.headingCenter:after {
+    display: none;
+}
+
+.sayHello {
+    color: var(--primary-color);
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    border-radius: 3px;
+    padding: 1.25rem 1.75rem;
+    font-size: 16px;
+    font-family: "Lucida Console", Helvetica, Arial, sans-serif;
+    line-height: 1;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.sayHello:hover {
+    background-color: var(--primaryLight-color);
+}
+
+@media (max-width: 1023px) {
+    .contact h4 {
+        font-size: 40px !important;
+    }
+
+    .section {
+        padding: 100px 0;
+    }
+
+    .headingCenter {
+        font-size: 22px;
+    }
+
+    .headingCenter:before {
+        font-size: 22px;
+    }
+
+    .para {
+        font-size: 20px;
+    }
+
+    .sayHello {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .contact h4 {
+        font-size: 35px !important;
+    }
+
+    .section {
+        padding-top: 150px;
+        padding-bottom: 50px;
+    }
+
+    .headingCenter {
+        font-size: 20px;
+    }
+
+    .headingCenter:before {
+        font-size: 18px;
+    }
+
+    .para {
+        font-size: 18px;
+    }
+
+    .sayHello {
+        font-size: 18px;
+    }
+}
