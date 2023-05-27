@@ -32,7 +32,6 @@ export default function Home() {
             let reqInstance = axios.create({
               headers: {
                 Authorization: response?.data?.record?.data?.[0]?.strapiApiKey,
-                "Cache-Control": "max-age=604800",
               },
             });
             reqInstance
