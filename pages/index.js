@@ -14,6 +14,7 @@ export default function Home() {
     const configForJsonBin = {
       headers: {
         "X-Master-Key": `$2b$10$${process.env.NEXT_PUBLIC_JSON_BIN_MASTER_KEY}`,
+        "Cache-Control": "max-age=604800",
       },
     };
     axios
@@ -31,6 +32,7 @@ export default function Home() {
             let reqInstance = axios.create({
               headers: {
                 Authorization: response?.data?.record?.data?.[0]?.strapiApiKey,
+                "Cache-Control": "max-age=604800",
               },
             });
             reqInstance
